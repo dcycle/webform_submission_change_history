@@ -69,6 +69,7 @@ class SubmissionInfo {
     $query->addField('wsl', 'uid');
     $query->addField('wsl', 'timestamp');
     $query->addField('wsl', 'data');
+    $query->condition('wsl.operation', 'submission updated');
     $query->condition('wsl.sid', $this->id);
 
     return $this->processDbResult($query->execute()->fetchAll());

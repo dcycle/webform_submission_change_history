@@ -88,9 +88,6 @@ class FieldHistory {
   public function formattedRows() : array {
     $return = [];
     foreach ($this->getChanges() as $change) {
-      if (!$change->from()) {
-        continue;
-      }
       $return[] = [
         $change->from(),
         $change->to(),
