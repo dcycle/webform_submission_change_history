@@ -40,8 +40,8 @@ Taking the contact form as an example, make sure event logging is set up for tha
 
 In order for update events to be logged for Webform submissions, you need to apply the patch appropriate for your version:
 
-* 8.x-5.0-rc30 or after: 8.x-1.0-beta3 and [this webform patch]()
-* 8.x-5.0-rc29 or before: 8.x-1.0-beta2 and [this webform patch](https://www.drupal.org/files/issues/2018-05-29/2972498-8-webform-8.x-5.x-log-changes.patch)
+* 8.x-5.0-rc30 or after: 8.x-2.x and [this webform patch](https://www.drupal.org/files/issues/2018-12-18/2972498-9-webform-8.x-5.x-log-changes.patch)
+* 8.x-5.0-rc29 or before: 8.x-1.x and [this webform patch](https://www.drupal.org/files/issues/2018-05-29/2972498-8-webform-8.x-5.x-log-changes.patch)
 
 ### Step 4: Use the right permissions
 
