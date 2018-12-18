@@ -24,7 +24,7 @@ Taking the contact form as an example, make sure event logging is set up for tha
 
 ### Step 3: Patch the Webform module
 
-In order for update events to be logged for Webform submissions, you need to apply [this patch](https://www.drupal.org/project/webform/issues/2972498#comment-12613727) to Webform.
+In order for update events to be logged for Webform submissions, you need to apply [this patch](https://www.drupal.org/files/issues/2018-05-29/2972498-8-webform-8.x-5.x-log-changes.patch) to Webform.
 
 ### Step 4: Use the right permissions
 
