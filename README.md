@@ -14,7 +14,7 @@ Which version to use?
 * If you are using Webform 8.x-5.0-rc30 or after: 8.x-2.x and [this webform patch](https://www.drupal.org/files/issues/2018-12-18/2972498-9-webform-8.x-5.x-log-changes.patch)
 * If you are using Webform 8.x-5.0-rc29 or before: 8.x-1.x and [this webform patch](https://www.drupal.org/files/issues/2018-05-29/2972498-8-webform-8.x-5.x-log-changes.patch)
 
-Upgrading from Webform 8.x-1.x to 8.x-2.x
+Upgrading from version 8.x-1.x to 8.x-2.x
 -----
 
 * Make sure you have version 8.x-5.0-rc30 or later of Webform
