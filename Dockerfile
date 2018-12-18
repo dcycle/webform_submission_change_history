@@ -10,6 +10,6 @@ RUN drush dl webform -y
 RUN apt-get -y install wget
 
 RUN cd modules/webform && wget https://www.drupal.org/files/issues/2018-12-18/2972498-9-webform-8.x-5.x-log-changes.patch
-# RUN cd modules/webform && patch -p1 < 2972498-9-webform-8.x-5.x-log-changes.patch
+RUN cd modules/webform && patch -p1 < 2972498-9-webform-8.x-5.x-log-changes.patch
 
 EXPOSE 80
