@@ -11,8 +11,8 @@ A Drupal 8 module which allows administrators to track notes on webform submissi
 Which version to use?
 -----
 
-* 8.x-5.0-rc30 or after: 8.x-1.0-beta3 and [this webform patch]()
-* 8.x-5.0-rc29 or before: 8.x-1.0-beta2 and [this webform patch](https://www.drupal.org/project/webform/issues/2972498#comment-12613727)
+* 8.x-5.0-rc30 or after: 8.x-2.x and [this webform patch]()
+* 8.x-5.0-rc29 or before: 8.x-1.x and [this webform patch](https://www.drupal.org/project/webform/issues/2972498#comment-12613727)
 
 Usage
 -----
