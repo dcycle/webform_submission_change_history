@@ -6,9 +6,10 @@ RUN echo 'opcache.enable=0' >> /usr/local/etc/php/php.ini
 
 # Download contrib modules
 RUN drush dl devel -y
-RUN drush dl webform-8.x-5.0-rc29 -y
+RUN drush dl webform -y
 RUN apt-get -y install wget
-RUN cd modules/webform && wget https://www.drupal.org/files/issues/2018-05-29/2972498-8-webform-8.x-5.x-log-changes.patch
-RUN cd modules/webform && patch -p1 < 2972498-8-webform-8.x-5.x-log-changes.patch
+
+RUN cd modules/webform && wget https://www.drupal.org/files/issues/2018-12-18/2972498-9-webform-8.x-5.x-log-changes.patch
+RUN cd modules/webform && patch -p1 < 2972498-9-webform-8.x-5.x-log-changes.patch
 
 EXPOSE 80
