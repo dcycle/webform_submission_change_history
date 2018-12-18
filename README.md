@@ -38,7 +38,7 @@ In order for update events to be logged for Webform submissions, you need to app
 
 ### Step 4: Use the right permissions
 
-Make sure your users who need to access the log have the "Access the webform submission log" (`access webform submission log`) permission.
+Make sure your users who need to access the log have the "Access webform submission log" (`access webform submission log`) and "View any webform submission" (`view any webform submission`) permission.
 
 ### Step 5: Modify a submission
 
