@@ -8,27 +8,37 @@ A Drupal 8 module which allows administrators to track notes on webform submissi
 * status changed from Left Voicemail to Scheduled - May 10, 2018, 11:32 am - user_a
 * status changed from Left Scheduled to Canceled - May 12, 2018, 10:20 am - user_a
 
+Which version to use?
+-----
+
+* 8.x-5.0-rc30 or after: 8.x-1.0-beta3 and [this webform patch]()
+* 8.x-5.0-rc29 or before: 8.x-1.0-beta2 and [this webform patch](https://www.drupal.org/project/webform/issues/2972498#comment-12613727)
+
 Usage
 -----
 
 ### Step 1: Install as you would any Drupal module:
 
     drush dl webform_submission_change_history
+    drush en -y webform_submission_change_history
 
 (Or see the section, "To install a local version for development or evaluation", below.)
 
 ### Step 2: Set up logging
 
-Taking the contact form as an example, make sure event logging is set up for that form's submissions at `/admin/structure/webform/manage/contact/settings/submissions`, or globally at
+Taking the contact form as an example, make sure event logging is set up for that form's submissions (Submission Behaviors - Log submission events) at `/admin/structure/webform/manage/contact/settings/submissions`, or globally at
 `/admin/structure/webform/config/submissions`.
 
 ### Step 3: Patch the Webform module
 
-In order for update events to be logged for Webform submissions, you need to apply [this patch](https://www.drupal.org/project/webform/issues/2972498#comment-12613727) to Webform.
+In order for update events to be logged for Webform submissions, you need to apply the patch appropriate for your version:
+
+* 8.x-5.0-rc30 or after: 8.x-1.0-beta3 and [this webform patch]()
+* 8.x-5.0-rc29 or before: 8.x-1.0-beta2 and [this webform patch](https://www.drupal.org/project/webform/issues/2972498#comment-12613727)
 
 ### Step 4: Use the right permissions
 
-Make sure your users who need to access the log have the "Access webform submission log" (`access webform submission log`) permission.
+Make sure your users who need to access the log have the "Access the webform submission log" (`access webform submission log`) permission.
 
 ### Step 5: Modify a submission
 
