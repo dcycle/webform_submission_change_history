@@ -23,6 +23,7 @@ OUTPUT=$(echo 'select * from users limit 1'|{ mysql --user=root --password=drupa
 if [[ "$OUTPUT" == *"ERROR"* ]]; then
   echo "Installing Drupal because we did not find an entry in the users table."
   drush si -y --db-url=mysql://root:drupal@mysql/drupal \
+    standard \
     install_configure_form.update_status_module='array(FALSE,FALSE)'
     # Previous line gets rid of error because of no SMTP server. See
     # drush help si for details.
