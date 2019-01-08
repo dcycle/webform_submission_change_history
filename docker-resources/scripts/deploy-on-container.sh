@@ -24,7 +24,8 @@ if [[ "$OUTPUT" == *"ERROR"* ]]; then
   echo "Installing Drupal because we did not find an entry in the users table."
   drush si -y --db-url=mysql://root:drupal@mysql/drupal \
     standard \
-    install_configure_form.update_status_module='array(FALSE,FALSE)'
+    install_configure_form.enable_update_status_module=NULL \
+    install_configure_form.enable_update_status_emails=NULL
     # Previous line gets rid of error because of no SMTP server. See
     # drush help si for details.
   drush en -y devel webform_submission_change_history
