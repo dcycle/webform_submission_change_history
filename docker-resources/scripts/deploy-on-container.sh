@@ -22,7 +22,10 @@ done
 OUTPUT=$(echo 'select * from users limit 1'|{ mysql --user=root --password=drupal --database=drupal --host=mysql 2>&1 || true; })
 if [[ "$OUTPUT" == *"ERROR"* ]]; then
   echo "Installing Drupal because we did not find an entry in the users table."
-  drush si -y --db-url=mysql://root:drupal@mysql/drupal
+  drush si -y --db-url=mysql://root:drupal@mysql/drupal \
+    install_configure_form.update_status_module='array(FALSE,FALSE)'
+    # Previous line gets rid of error because of no SMTP server. See
+    # drush help si for details.
   drush en -y devel webform_submission_change_history
 else
   echo "Assuming Drupal is already running, because there is a users table with at least one entry."
