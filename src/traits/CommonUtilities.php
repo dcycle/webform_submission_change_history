@@ -47,10 +47,17 @@ trait CommonUtilities {
    */
   public function spliceAfterKey(array $array, string $key, array $array_to_insert) : array {
     $key_pos = array_search($key, array_keys($array));
-    if ($key_pos !== FALSE) {
+    if ($key_pos !== FALSE && !empty($array[$key]['#title'])) {
       $key_pos++;
       $second_array = array_splice($array, $key_pos);
       $array = array_merge($array, $array_to_insert, $second_array);
+    }
+    else {
+      foreach (array_keys($array) as $id) {
+        if (is_array($array[$id])) {
+          $array[$id] = $this->spliceAfterKey($array[$id], $key, $array_to_insert);
+        }
+      }
     }
     return $array;
   }
